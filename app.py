@@ -50,7 +50,7 @@ sessions: Dict[str, List[tuple]] = {}
 print("🔄 Loading models and vector store...")
 
 llm = ChatGroq(
-    model="llama-3.3-70b-versatile",
+    model="llama-3-7b-versatile",  
     temperature=0.3,
     max_tokens=1000
 )
@@ -201,4 +201,5 @@ async def list_sessions():
     return {
         "active_sessions": len(sessions),
         "session_ids": list(sessions.keys())
+
     }
